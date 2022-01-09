@@ -1,6 +1,6 @@
 # ban_failed
 
-*ATTENTION: This is just a proof of concept (POC)!*
+**ATTENTION: This is just a proof of concept (POC)!**
 
 This project is not for "use in production".
 

@@ -6,7 +6,7 @@ This project is not for "use in production".
 
 ## How it works (or better - should work)
 
-* Configure your POSTFIX/COURIER-IMAP server to log to your salt master via (systemd-journal-upload)[https://www.freedesktop.org/software/systemd/man/systemd-journal-upload.service.html]
+* Configure your POSTFIX/COURIER-IMAP server to log to your salt master via [systemd-journal-upload](https://www.freedesktop.org/software/systemd/man/systemd-journal-upload.service.html)
 * Configure ban_failed (/etc/ban_failed/config.yml) on your salt master
   * to read from the remote log 
     * (journaltctl -f /var/log/journal/remote/...) is your friend

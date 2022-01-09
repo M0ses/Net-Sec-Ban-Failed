@@ -1,0 +1,11 @@
+log_file: /var/log/ban_failed.log
+log_input:
+  -
+    type: journalctl
+    file: /var/log/journal/remote/remote-CN\=<remote_host>.journal
+    deploy:
+      type: salt
+      # salt_id: 'firewall*.mydomain.com
+      salt_id: <remote_host|firewall_identifier>
+      salt_state: <firewall_state>
+      salt_file: /srv/salt/path/to/firewall/abuse_file

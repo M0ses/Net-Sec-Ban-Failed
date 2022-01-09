@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Data::Dumper;
+use Getopt::Long;
+use YAML ();
+
+use Net::Sec::Ban::Failed;
+
+my $follow;
+GetOptions ("follow"  => \$follow)   # flag
+or die("Error in command line arguments\n");
+
+my $config = YAML::LoadFile($ENV{BAN_FAILED_CONFIG});
+
+my $nsbf = Net::Sec::Ban::Failed->new(
+  config  => $config,
+  options => {
+    follow => $follow,
+  },
+);
+
+$nsbf->run;
+
+exit 0;

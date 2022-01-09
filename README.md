@@ -1,8 +1,14 @@
-# ban_failed
+# ban_failed - monitor logs/update configs
 
-**ATTENTION: This is just a proof of concept (POC)!**
+**ATTENTION: This is just a proof of concept (POC)! This project is not for productive use!**
 
-This project is not for "use in production".
+## The Idea:
+
+* monitor your centralized log files for security relevant incidences
+* update your configs in real time
+* keep track of changes via VCS (e.g. git)
+* deploy updated configs via your preferred configuration management (e.g. salt, puppet, ansible)
+
 
 ## How it works (or better - should work)
 

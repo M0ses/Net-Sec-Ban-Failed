@@ -1,0 +1,8 @@
+[Unit]
+Description=Ban Failed
+
+[Service]
+ExecStart=/usr/sbin/ban-failed -f
+
+[Install]
+WantedBy=multi-user.target

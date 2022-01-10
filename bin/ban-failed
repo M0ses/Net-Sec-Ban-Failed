@@ -6,7 +6,7 @@ use Data::Dumper;
 use Getopt::Long;
 use YAML ();
 
-BEGIN { unshift @::INC, '/usr/lib/ban_failed/' }; # TODO: make more flexible
+BEGIN { unshift @::INC, '/usr/lib/ban-failed/' }; # TODO: make more flexible
 
 use Net::Sec::Ban::Failed;
 
@@ -14,7 +14,7 @@ my $follow;
 GetOptions ("follow"  => \$follow)   # flag
 or die("Error in command line arguments\n");
 
-my $config = YAML::LoadFile($ENV{BAN_FAILED_CONFIG}||'/etc/ban_failed/config.yml');
+my $config = YAML::LoadFile($ENV{BAN_FAILED_CONFIG}||'/etc/ban-failed/config.yml');
 
 my $nsbf = Net::Sec::Ban::Failed->new(
   config  => $config,
